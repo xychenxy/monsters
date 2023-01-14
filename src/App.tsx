@@ -6,6 +6,7 @@ import "./App.css";
 
 function App() {
 	const [monsters, setMonsters] = useState([]);
+	const [filteredMonsters, setFilteredMonsters] = useState([]);
 	const [searchField, setSearchField] = useState("");
 
 	useEffect(() => {
@@ -14,13 +15,16 @@ function App() {
 			.then((users) => setMonsters(users));
 	}, []);
 
+	useEffect(() => {
+		const newFilteredMonsters = monsters.filter((monster: Monster) =>
+			monster.name.toLowerCase().includes(searchField.toLocaleLowerCase())
+		);
+		setFilteredMonsters(newFilteredMonsters);
+	}, [monsters, searchField]);
+
 	const onSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
 		setSearchField(e.target.value);
 	};
-
-	const filteredMonsters = monsters.filter((monster: Monster) =>
-		monster.name.toLowerCase().includes(searchField.toLocaleLowerCase())
-	);
 
 	return (
 		<div className="App">
