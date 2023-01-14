@@ -1,10 +1,9 @@
 import style from "./search-box.component.module.css";
 
-export const SearchBox = ({
-	onSearchChange,
-}: {
+type SearchBoxProps = {
 	onSearchChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
-}) => {
+};
+export const SearchBox = ({ onSearchChange }: SearchBoxProps) => {
 	return (
 		<input
 			className={style.container}

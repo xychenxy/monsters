@@ -1,8 +1,8 @@
 import style from "./card.component.module.css";
 import { Monster } from "../../utils/types";
 
-type Props = { monster: Monster };
-export const Card = ({ monster }: Props) => {
+type CardProps = { monster: Monster };
+export const Card = ({ monster }: CardProps) => {
 	const { name, email, id } = monster;
 	return (
 		<div className={style.container}>
