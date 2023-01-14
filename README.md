@@ -10,5 +10,5 @@
 -   Get avatar from https://robohash.org
 -   Fuzzy search
 
-![My_Image](assets/Screen%20Shot%202023-01-14%20at%201.16.17%20pm.png)
-![My_image](assets/Screen%20Shot%202023-01-14%20at%201.16.31%20pm.png)
+![My_Image](src/assets/Screen%20Shot%202023-01-14%20at%201.16.17%20pm.png)
+![My_image](src/assets/Screen%20Shot%202023-01-14%20at%201.16.31%20pm.png)
