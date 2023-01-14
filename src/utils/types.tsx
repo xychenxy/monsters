@@ -21,3 +21,10 @@ export type Monster = {
 	username: string;
 	website: string;
 };
+
+// or, as we only these three variables
+export type Monster1 = {
+	name: "string";
+	id: "string";
+	email: "string";
+};
